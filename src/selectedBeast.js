@@ -27,6 +27,9 @@ class SelectedBeast extends React.Component {
                 <Card.Text>
                   {this.props.theeBeast.description}
                 </Card.Text>
+                <Card.Text>
+                  I have {this.props.theeBeast.horns} Horns!
+                </Card.Text>
               </Card.Body>
             </Card>
           </Modal.Body>

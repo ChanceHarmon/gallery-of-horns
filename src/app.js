@@ -26,12 +26,17 @@ class App extends React.Component {
   handleClose = () => {
     this.setState({ displayModal: false })
   }
+
+  handleFilter = (beastData) => {
+    console.log(beastData)
+    this.setState({ beastData })
+  }
   render() {
     return (
       <>
         <div>
           <Header />
-          <Main beastData={this.state.beastData} displayAsModal={this.displayAsModal} />
+          <Main beastData={this.state.beastData} displayAsModal={this.displayAsModal} handleFilter={this.handleFilter} />
           <SelectedBeast theeBeast={this.state.theeBeast} show={this.state.displayModal} handleClose={this.handleClose} />
           <Footer />
         </div>
